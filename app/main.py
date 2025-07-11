@@ -22,10 +22,12 @@ app = FastAPI(
 ENV = os.getenv("ENV", "development")  # .env 파일에 ENV 변수가 없으면 'development'로 간주
 
 if ENV == "production":
-    # 운영 환경에서 허용할 프론트엔드 도메인 목록
     allow_origins = [
-        "https://your-production-domain.com",  # 실제 운영 도메인으로 변경하세요
-        "https://haneul-portfolio.vercel.app" # 예시: Vercel 배포 도메인
+        "https://www.haneull.com",
+        "https://portfolio-v0-02-git-main-haneull-dvs-projects.vercel.app",
+        "https://portfolio-v0-02-2gdu3pezg-haneull-dvs-projects.vercel.app",
+        "https://dsdcheck.haneull.com",
+        "https://conan.ai.kr"
     ]
 else:
     # 개발 환경에서 허용할 프론트엔드 주소 목록
